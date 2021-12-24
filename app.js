@@ -2,6 +2,8 @@ const express = require("express");
 
 const app = express();
 
+app.use(express.json()); // Ce middleware nous met à disposition le corps de la requête ( son equivalent c'est bodyParser )
+
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
@@ -13,6 +15,11 @@ app.use((req, res, next) => {
     "GET, POST, PUT, DELETE, PATCH, OPTIONS"
   );
   next();
+});
+
+app.post("/api/stuff", (req, res, next) => {
+  console.log(req.body);
+  res.status(201).json({ message: "Objet crée !" });
 });
 
 app.get("/api/stuff", (req, res, next) => {
