@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Dev-Martinien/go-fullstack-node-express-mongodb/issues"
   },
-  "homepage": "https://github.com/Dev-Martinien/go-fullstack-node-express-mongodb#readme"
+  "homepage": "https://github.com/Dev-Martinien/go-fullstack-node-express-mongodb#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
