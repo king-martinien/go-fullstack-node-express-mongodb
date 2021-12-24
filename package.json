@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/Dev-Martinien/go-fullstack-node-express-mongodb#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "mongoose": "^6.1.3"
   }
 }

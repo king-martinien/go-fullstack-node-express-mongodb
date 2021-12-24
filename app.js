@@ -1,6 +1,18 @@
 const express = require("express");
-
 const app = express();
+const mongoose = require("mongoose");
+
+mongoose
+  .connect(
+    "mongodb+srv://Martinien:Arserom1@cluster0.p5xyi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    { useNewUrlParser: true, useUnifiedTopology: true }
+  )
+  .then(() => {
+    console.log("Connexion à mongoDB réussie !");
+  })
+  .catch(() => {
+    console.log("Connexion à mongoDB échouée !");
+  });
 
 app.use(express.json()); // Ce middleware nous met à disposition le corps de la requête ( son equivalent c'est bodyParser )
 
